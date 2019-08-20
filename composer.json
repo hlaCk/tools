@@ -22,11 +22,11 @@
         "nwidart/laravel-modules": "^5.0",
         "plank/laravel-mediable": "^2.9",
         "santigarcor/laratrust": "5.0.*",
-        "spatie/laravel-fractal": "^5.4",
+        "spatie/laravel-fractal": "^5.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
-        "barryvdh/laravel-ide-helper": "^2.6",
+        "barryvdh/laravel-ide-helper": "^2.6"
     },
     "autoload": {
         "classmap": [
