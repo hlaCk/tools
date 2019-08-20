@@ -1,157 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f3d5f6a-0753-4325-b5d3-a46c930d11b6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/ConfFacade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/ConfManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Config/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Config/FileDriverTwo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Config/cfg.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Config/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Config/laravel-conf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Console/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Contracts/ConfContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Contracts/Factory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/2014_10_12_000000_create_laravel_conf_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/Seeders/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/Seeders/CfgDatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/factories/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Drivers/AbstractDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Drivers/DatabaseDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Drivers/FileDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Drivers/FileDriverTwo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Entities/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Entities/Cfgrs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Http/Controllers/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Http/Controllers/CfgController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Http/Middleware/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Http/Requests/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Models/Conf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Providers/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Providers/CfgServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/assets/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/lang/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/views/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Resources/views/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Tests/Feature/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Tests/Unit/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/module.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/start.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/app_options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/autoRouteModels.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/backup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/codegenerator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/codegenerator_custom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/commands.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/crudService.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/excel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/fractal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/ide-helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/language.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/laratrust.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/laratrust_seeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/laravel-conf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/mediable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/menu-off.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/modules.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/signed-url.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/snappy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/-config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/-Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Commands/AutoRouteModelsAdd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Commands/AutoRouteModelsList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Commands/AutoRouteModelsRemove.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Commands/AutoRouteModelsStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/command.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/composer.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/controller-plain.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/controller-print-helper.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/controller.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/event.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/job.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/json.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/listener.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/mail.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/middleware.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/migration/add.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/migration/create.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/migration/delete.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/migration/drop.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/migration/plain.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/model-print-helper.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/model.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/notification.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/provider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/request.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/route-provider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/routes.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/scaffold/config.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/scaffold/provider.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/seeder.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/start.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/views/index.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Console/Stubs/Modules/views/master.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Http/Middleware/LaratrustPermission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Http/Middleware/ViewAssign.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Http/ViewComposers/All.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Overrides/Akaunting/SetLocale.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Overrides/Akaunting/SignedUrl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Overrides/Illuminate/MessageSelector.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasDescription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasDisplayName.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasModelAutoRegister.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasModelConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasModelPaths.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasModelPermissions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasModelRoutes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasName.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/HasToArrayName.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/Media.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/ModelTree.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/NameTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/ObjectAccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/colNameTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Traits/getObjectType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Utilities/ArrayObject.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Utilities/Drivers/ModelConfigrationCollecrtion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Utilities/Drivers/ModelConfigrationSD.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/-Utilities/MySQLBackup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/ToolsHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/App/Filters/StuberFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/App/Http/Controllers/Stubers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/App/Http/Requests/StuberRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/App/Listeners/Stuber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/App/Models/Stuber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/App/Transformers/Stuber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/ModelCrud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/config/Stuber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/database/migrations/2019_08_17_000000_create_stubers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/lang/ar/stuber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/lang/en/stuber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/views/stubers/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/views/stubers/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/views/stubers/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/views/stubers/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/resources/views/stubers/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newModel/test.mtuber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="7f3d5f6a-0753-4325-b5d3-a46c930d11b6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -410,12 +260,12 @@
       <workItem from="1551369145920" duration="94000" />
       <workItem from="1553551976706" duration="18268000" />
       <workItem from="1554225459414" duration="1793000" />
-      <workItem from="1566328748113" duration="2963000" />
+      <workItem from="1566328748113" duration="3052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="533246000" />
+    <option name="totallyTimeSpent" value="533335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,7 +278,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
