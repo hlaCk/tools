@@ -10,6 +10,7 @@ namespace App\Utilities\Drivers;
 
 
 use Garf\LaravelConf\Drivers\AbstractDriver;
+use Illuminate\Support\Arr;
 
 class ModelConfigrationSD extends AbstractDriver {
 
@@ -37,7 +38,7 @@ class ModelConfigrationSD extends AbstractDriver {
             $this->config = json_decode(file_get_contents($this->file), true);
         }
 
-        $this->colection = new ModelConfigrationCollecrtion();
+        $this->colection = new ModelConfigrationCollection();
     }
 
     private function config(...$vars) {
@@ -63,7 +64,7 @@ class ModelConfigrationSD extends AbstractDriver {
      * @return string
      */
     public function get($key, $default = null) {
-        $result = parent::get($key, $default);
+        $result = Arr::get($this->config, $key, $default);
         return $result;
     }
 
@@ -118,11 +119,11 @@ class ModelConfigrationSD extends AbstractDriver {
 
     public function __get($name)
     {
-        if($name == 'all')
+//        if($name == 'all')
             $data = $this->config();
-        else
-            $data = $this->config('enable');
-
+//        else
+//            $data = $this->config($name);
+        
         return $name == 'all' ? $data->toArray() : $data->get($name, null);
     }
 
@@ -156,13 +157,16 @@ class ModelConfigrationSD extends AbstractDriver {
 
     public function __call($name, $arguments)
     {
-        $data = $this->collect($this->__get($name));
+        $data = $this->collect($this->get($name));
+        if($arguments) {
+        	$data = $data->get(implode(".", $arguments));
+        }
         return $data;
     }
 
     public function collect()
     {
-        return new ModelConfigrationCollecrtion(...func_get_args());
+        return new ModelConfigrationCollection(...func_get_args());
     }
 
 }
