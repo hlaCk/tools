@@ -567,6 +567,71 @@ if (! function_exists('autoModel')) {
     }
 }
 
+if (! function_exists('real_path')) {
+	/**
+	 * return given path without ../
+	 *
+	 * @param null   $path
+	 * @param string $DIRECTORY_SEPARATOR
+	 *
+	 * @return string
+	 */
+	function real_path($path = null, $DIRECTORY_SEPARATOR = "/") {
+		$_DIRECTORY_SEPARATOR = $DIRECTORY_SEPARATOR == "/" ? "\\" : "/";
+		if($path) $path = str_ireplace($_DIRECTORY_SEPARATOR, $DIRECTORY_SEPARATOR, $path);
+		
+		$backslash = "..{$DIRECTORY_SEPARATOR}";
+		if(stripos($path, $backslash)!==false) {
+			$path = collect(explode($backslash,$path))->reverse();
+			$path = $path->map(function($v, $i) use($path) {
+				$_v = dirname($v);
+				return $i == $path->count()-1 ? $v :
+					($_v == '.' ? '' : $_v);
+			});
+			$path = str_ireplace(
+				$DIRECTORY_SEPARATOR . $DIRECTORY_SEPARATOR,
+				$DIRECTORY_SEPARATOR,
+				$path->reverse()->implode($DIRECTORY_SEPARATOR)
+			);
+		}
+		
+		return collect($path)->first();
+	}
+}
+
+if (! function_exists('currentNamespace')) {
+	/**
+	 * get current namespace
+	 *
+	 * @param null $append
+	 *
+	 * @return null|string
+	 */
+	function currentNamespace($append = null) {
+		$caller = debug_backtrace();
+		$caller = $caller[1];
+		$class = null;
+		try {
+			if (isset($caller['class'])) {
+				$class = (new ReflectionClass($caller['class']))->getNamespaceName();
+			}
+			if (isset($caller['object'])) {
+				$class = (new ReflectionClass(get_class($caller['object'])))->getNamespaceName();
+			}
+		} catch (ReflectionException $exception) {
+//			d($exception);
+			return null;
+		}
+		if($append) $append = str_ireplace("/", "\\", $append);
+		if($class) $class = str_ireplace("/", "\\", $class);
+		
+		if($class) $class = real_path("{$class}" . ($append ? "\\{$append}" : ""));
+		
+		return $class;
+	}
+}
+
+
 
 
 // statics
