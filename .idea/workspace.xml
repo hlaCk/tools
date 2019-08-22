@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3d5f6a-0753-4325-b5d3-a46c930d11b6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/UnderZ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UnderZ.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/ToolsHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/ToolsHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/2014_10_12_000000_create_cfg_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/2014_10_12_000000_create_laravel_conf_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/2014_10_12_000000_create_cfg_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,20 +35,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="2014_10_12_000000_create_cfg_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/2014_10_12_000000_create_cfg_table.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ArtisanyType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/-Traits/ArtisanyType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="600">
               <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolsHelper.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ModelConfigrationCollecrtionMacros.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/-Utilities/Drivers/ModelConfigrationCollecrtionMacros.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ToolsHelper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Helpers/ToolsHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
-              <caret line="632" lean-forward="true" selection-start-line="632" selection-end-line="632" />
+            <state relative-caret-position="2025">
+              <caret line="632" selection-start-line="632" selection-end-line="632" />
               <folding>
                 <element signature="e#320#635#0#PHP" />
                 <element signature="e#363#501#0#PHP" />
@@ -136,12 +156,6 @@
                 <element signature="e#15621#15793#0#PHP" />
                 <element signature="e#15861#15928#0#PHP" />
                 <element signature="e#15938#16017#0#PHP" />
-                <element signature="e#16082#16982#0#PHP" />
-                <element signature="e#16255#16980#0#PHP" expanded="true" />
-                <element signature="e#16641#16770#2#PHP" expanded="true" />
-                <element signature="e#17122#17786#0#PHP" expanded="true" />
-                <element signature="e#16108#16184#0#PHP" />
-                <element signature="e#16115#16183#1#PHP" />
               </folding>
             </state>
           </provider>
@@ -249,6 +263,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/-Modules/Artisany/package.json" />
       <path value="$PROJECT_DIR$/-Modules/Cfg/package.json" />
     </packageJsonPaths>
   </component>
@@ -280,13 +295,33 @@
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="-Modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="-Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Cfg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="-Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Cfg" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="-Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Cfg" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,11 +345,11 @@
       <recent name="H:\AppServ\www\hlackTools\tools\app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\AppServ\www\hlackTools\tools\routes" />
-      <recent name="H:\AppServ\www\hlackTools\tools" />
-      <recent name="H:\AppServ\www\hlackTools\tools\Modules" />
-      <recent name="H:\AppServ\www\hlackTools\tools\app" />
+      <recent name="H:\AppServ\www\hlackTools\tools\-Modules\Cfg\Database\Migrations" />
       <recent name="H:\AppServ\www\hlackTools\tools\app\-Traits" />
+      <recent name="H:\AppServ\www\hlackTools\tools\app\-Utilities\Drivers" />
+      <recent name="H:\AppServ\www\hlackTools\tools\-Modules" />
+      <recent name="H:\AppServ\www\hlackTools\tools\routes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -359,11 +394,13 @@
       <workItem from="1554225459414" duration="1793000" />
       <workItem from="1566328748113" duration="3052000" />
       <workItem from="1566405913339" duration="752000" />
+      <workItem from="1566430549060" duration="258000" />
+      <workItem from="1566431136813" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534087000" />
+    <option name="totallyTimeSpent" value="534359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -376,7 +413,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -385,7 +421,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32963374" />
       <window_info anchor="bottom" id="Floobits" order="10" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32852387" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1359275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13859275" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -420,9 +456,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/Menu.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/Modules.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/Notifications.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/Recurring.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/Suggestions.php" />
     <entry file="file://$PROJECT_DIR$/app/-Http/Middleware/ViewAssign.php">
@@ -569,15 +602,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="600">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Helpers/ToolsHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="632" lean-forward="true" selection-start-line="632" selection-end-line="632" />
+        <state relative-caret-position="2025">
+          <caret line="632" selection-start-line="632" selection-end-line="632" />
           <folding>
             <element signature="e#320#635#0#PHP" />
             <element signature="e#363#501#0#PHP" />
@@ -666,15 +699,22 @@
             <element signature="e#15621#15793#0#PHP" />
             <element signature="e#15861#15928#0#PHP" />
             <element signature="e#15938#16017#0#PHP" />
-            <element signature="e#16082#16982#0#PHP" />
-            <element signature="e#16255#16980#0#PHP" expanded="true" />
-            <element signature="e#16641#16770#2#PHP" expanded="true" />
-            <element signature="e#17122#17786#0#PHP" expanded="true" />
-            <element signature="e#16108#16184#0#PHP" />
-            <element signature="e#16115#16183#1#PHP" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/-Utilities/Drivers/ModelConfigrationCollecrtionMacros.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/-Traits/ArtisanyType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/-Modules/Cfg/Database/Migrations/2014_10_12_000000_create_cfg_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

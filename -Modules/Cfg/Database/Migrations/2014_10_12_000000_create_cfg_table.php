@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLaravelConfTable extends Migration
+class CreateCfgTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateLaravelConfTable extends Migration
      */
     public function up()
     {
-        Schema::create('laravel_conf', function (Blueprint $table) {
+        Schema::create('cfg', function (Blueprint $table) {
             $table->string('key');
             $table->string('value');
 
@@ -27,6 +27,6 @@ class CreateLaravelConfTable extends Migration
      */
     public function down()
     {
-        Schema::drop('laravel_conf');
+        Schema::drop('cfg');
     }
 }
