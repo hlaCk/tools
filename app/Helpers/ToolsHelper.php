@@ -1,5 +1,16 @@
 <?php
 
+if (!function_exists('carbon')) {
+	/**
+	 * Returns Carbon class
+	 *
+	 * @return \Carbon\Carbon
+	 */
+	function carbon() {
+		return app(\Carbon\Carbon::class);
+	}
+}
+
 function attrLocaleName($col = "name"){
 
     $locale = current(explode("-", app()->getLocale()));
@@ -58,7 +69,6 @@ if (!function_exists('appendGlobalCompacts')) {
     }
 }
 
-
 if (!function_exists('AuthUser')) {
     /**
      * get Auth::User, current logged in user
@@ -68,19 +78,6 @@ if (!function_exists('AuthUser')) {
     function AuthUser()
     {
         return Auth::user();
-    }
-}
-
-
-if (!function_exists('Support')) {
-    /**
-     * get if Auth::User is support user
-     *
-     * @return bool
-     */
-    function Support() {
-        $auth_user = User();
-        return ($auth_user != null && $auth_user->email == "support@4myth.com");
     }
 }
 
@@ -95,16 +92,6 @@ if (!function_exists('User')) {
     }
 }
 
-if (!function_exists('CurrentRoute')) {
-    /**
-     * get current route
-     * @return \Illuminate\Foundation\Application|\Illuminate\Routing\Route|mixed
-     */
-    function CurrentRoute() {
-        return app(\Illuminate\Routing\Route::class);
-    }
-}
-
 if (!function_exists('ViewMode')) {
     /**
      * get current route
@@ -116,16 +103,6 @@ if (!function_exists('ViewMode')) {
         } catch (Exception $exception) {
             return null;
         }
-    }
-}
-
-if (!function_exists('isViewMode')) {
-    /**
-     * get current route
-     * @return \Illuminate\Foundation\Application|\Illuminate\Routing\Route|mixed
-     */
-    function isViewMode($mode) {
-        return strtolower(trim($mode)) == strtolower(trim(ViewMode()));
     }
 }
 
@@ -180,170 +157,40 @@ if (!function_exists('AuthPermissions')) {
     }
 }
 
-if (!function_exists('grtNamespacePermission')) {
-    /**
-     * return perm name from controller full namespace
-     *
-     * @return string
-     */
-    function grtNamespacePermission() : string
-    {
-        $route = app(\Illuminate\Routing\Route::class);
-
-        // Get the controller array
-        $arr = array_reverse(explode('\\', explode('@', $route->getAction()['uses'])[0]));
-
-        $controller = '';
-
-        // Add folder
-        if (strtolower($arr[1]) != 'controllers') {
-            $controller .= kebab_case($arr[1]) . '-';
-        }
-
-        // Add module
-        if (isset($arr[3]) && isset($arr[4]) && (strtolower($arr[4]) == 'modules')) {
-            $controller .= kebab_case($arr[3]) . '-';
-        }
-
-        // Add file
-        $controller .= kebab_case($arr[0]);
-
-        return $controller;
-    }
+if (!function_exists('Support')) {
+	/**
+	 * get if Auth::User is support user
+	 *
+	 * @return bool
+	 */
+	function Support() {
+		$auth_user = User();
+		
+		// return ($auth_user != null && config("user.support.email") != null &&
+		// 	$auth_user->email == config("user.support.email"));
+		
+		return ($auth_user != null && $auth_user->email == "support@4myth.com");
+	}
 }
 
-if (! function_exists('crudTrans')) {
-    /**
-     * Translate curd syste,
-     *
-     * @param  string  $key
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return \Illuminate\Contracts\Translation\Translator|string|array|null
-     */
-    function crudTrans($key = null)
-    {
-        if(!$key) return "";
-
-        return trans(
-            str_plural(
-                snake_case(
-                    collect(
-                        explode(
-                            "\\",
-                            str_before(Route::current()->getActionName(), "@")
-                        )
-                    )
-                        ->last()
-                )
-            ) . ".{$key}"
-        );
-//        $locale = 'en';
-//        return trans($key, $replace, $locale);
-    }
+if (!function_exists('isSupport')) {
+	/**
+	 * Alias for function {@see Support()}
+	 *
+	 * @return bool
+	 */
+	function isSupport() { return Support(); }
 }
 
-if (! function_exists('transEN')) {
-    /**
-     * Translate the given message. To en
-     *
-     * @param  string  $key
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return \Illuminate\Contracts\Translation\Translator|string|array|null
-     */
-    function transEN($key = null, $replace = [])
-    {
-        $locale = 'en';
-        return trans($key, $replace, $locale);
-    }
-}
-
-if (! function_exists('trans_choiceEN')) {
-    /**
-     * Translates the given message based on a count. to en
-     *
-     * @param  string  $key
-     * @param  int|array|\Countable  $number
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return string
-     */
-    function trans_choiceEN($key, $number, array $replace = [])
-    {
-        $locale = 'en';
-        return trans_choice($key, $number, $replace, $locale);
-    }
-}
-
-if (! function_exists('transAR')) {
-    /**
-     * Translate the given message. To ar
-     *
-     * @param  string  $key
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return \Illuminate\Contracts\Translation\Translator|string|array|null
-     */
-    function transAR($key = null, $replace = [])
-    {
-        $locale = 'ar';
-        return trans($key, $replace, $locale);
-    }
-}
-
-if (! function_exists('trans_choiceAR')) {
-    /**
-     * Translates the given message based on a count. to ar
-     *
-     * @param  string  $key
-     * @param  int|array|\Countable  $number
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return string
-     */
-    function trans_choiceAR($key, $number, array $replace = [])
-    {
-        $locale = 'ar';
-        return trans_choice($key, $number, $replace, $locale);
-    }
-}
-
-if (! function_exists('trans2')) {
-    /**
-     * Translate the given message. To the other language.
-     * if your lang is ar it will return en
-     * if your lang is en it will return ar
-     *
-     * @param  string  $key
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return \Illuminate\Contracts\Translation\Translator|string|array|null
-     */
-    function trans2($key = null, $replace = [])
-    {
-        $locale = app()->getLocale() == 'ar' ? 'en' : 'ar';
-        return trans($key, $replace, $locale);
-    }
-}
-
-if (! function_exists('trans_choice2')) {
-    /**
-     * Translates the given message based on a count. To the other language.
-     * if your lang is ar it will return en
-     * if your lang is en it will return ar
-     *
-     * @param  string  $key
-     * @param  int|array|\Countable  $number
-     * @param  array   $replace
-     * @param  string  $locale
-     * @return string
-     */
-    function trans_choice2($key, $number, array $replace = [])
-    {
-        $locale = app()->getLocale() == 'ar' ? 'en' : 'ar';
-        return trans_choice($key, $number, $replace, $locale);
-    }
+if (!function_exists('isViewMode')) {
+	/**
+	 * get current route
+	 *
+	 * @return \Illuminate\Foundation\Application|\Illuminate\Routing\Route|mixed
+	 */
+	function isViewMode($mode) {
+		return strtolower(trim($mode)) == strtolower(trim(ViewMode()));
+	}
 }
 
 if (! function_exists('is_collection')) {
@@ -545,28 +392,6 @@ if (! function_exists('dxx')) {
     function dxx(...$args) { }
 }
 
-if (! function_exists('autoModel')) {
-    /**
-     * config storage for autoModel
-     * @param null $key
-     * @param null $default
-     *
-     * @return \Illuminate\Foundation\Application|mixed|autoModel
-     */
-    function autoModel($key = null, $default = null)
-    {
-        if (is_null($key)) {
-            return app('autoModel');
-        }
-
-        if (is_array($key)) {
-            return app('autoModel')->put($key);
-        }
-
-        return app('autoModel')->get($key, $default);
-    }
-}
-
 if (! function_exists('real_path')) {
 	/**
 	 * return given path without ../
@@ -599,15 +424,55 @@ if (! function_exists('real_path')) {
 	}
 }
 
-if (! function_exists('currentNamespace')) {
+if (!function_exists('currentRoute')) {
 	/**
-	 * get current namespace
+	 * get current route
+	 *
+	 * @return \Illuminate\Foundation\Application|\Illuminate\Routing\Route|mixed
+	 */
+	function currentRoute() {
+		return app(\Illuminate\Routing\Route::class);
+	}
+}
+
+if (!function_exists('currentController')) {
+	/**
+	 * Returns current controller
+	 *
+	 * @return \Illuminate\Routing\Controller|null
+	 */
+	function currentController() {
+		return Route::getCurrentRoute()->controller;
+	}
+}
+
+if (!function_exists('currentNamespace')) {
+	/**
+	 * Returns namespace of current controller
+	 *
+	 * @return null|string Namespace
+	 */
+	function currentNamespace() {
+		$class = get_class(currentController());
+		try {
+			$namespace = (new ReflectionClass($class))->getNamespaceName();
+		} catch (ReflectionException $exception) {
+			return null;
+		}
+		
+		return $namespace;
+	}
+}
+
+if (!function_exists('getCurrentNamespace')) {
+	/**
+	 * Returns current namespace of current class|object
 	 *
 	 * @param null $append
 	 *
 	 * @return null|string
 	 */
-	function currentNamespace($append = null) {
+	function getCurrentNamespace($append = null) {
 		$caller = debug_backtrace();
 		$caller = $caller[1];
 		$class = null;
@@ -622,16 +487,253 @@ if (! function_exists('currentNamespace')) {
 //			d($exception);
 			return null;
 		}
-		if($append) $append = str_ireplace("/", "\\", $append);
-		if($class) $class = str_ireplace("/", "\\", $class);
+		if ($append) $append = str_ireplace("/", "\\", $append);
+		if ($class) $class = str_ireplace("/", "\\", $class);
 		
-		if($class) $class = real_path("{$class}" . ($append ? "\\{$append}" : ""));
+		if ($class) $class = real_path("{$class}" . ($append ? "\\{$append}" : ""));
 		
 		return $class;
 	}
 }
 
+if (!function_exists('getMethodName')) {
+	/**
+	 * Returns method name by given Route->uses
+	 *
+	 * @param string $method
+	 *
+	 * @return string
+	 */
+	function getMethodName(string $method) {
+		if (empty($method)) return '';
+		
+		$method = collect(explode('::', $method))->last();
+		$method = collect(explode('@', $method))->last();
+		
+		return $method;
+	}
+}
 
+if (!function_exists('getNamespacePermission')) {
+	/**
+	 * return perm name from controller full namespace
+	 *
+	 * @return string
+	 */
+	function getNamespacePermission()
+	: string {
+		$route = app(\Illuminate\Routing\Route::class);
+		
+		// Get the controller array
+		$arr = array_reverse(explode('\\', explode('@', $route->getAction()['uses'])[0]));
+		
+		$controller = '';
+		
+		// Add folder
+		if (strtolower($arr[1]) != 'controllers') {
+			$controller .= kebab_case($arr[1]) . '-';
+		}
+		
+		// Add module
+		if (isset($arr[3]) && isset($arr[4]) && (strtolower($arr[4]) == 'modules')) {
+			$controller .= kebab_case($arr[3]) . '-';
+		}
+		
+		// Add file
+		$controller .= kebab_case($arr[0]);
+		
+		return $controller;
+	}
+}
+
+if (!function_exists('getControllerPermissionPrefix')) {
+	/**
+	 * Returns prefix of permissions name
+	 *
+	 * @param \Illuminate\Routing\Controller|string|null $controller      Controller or controller name, default: {@see currentController()}
+	 * @param string|null                                $permission_name Permission name
+	 * @param string                                     $separator       Permission name separator
+	 *
+	 * @return string
+	 */
+	function getControllerPermissionPrefix($controller = null, $permission_name = null, $separator = "_")
+	: string {
+		$controller = $controller instanceof \Illuminate\Routing\Controller ? get_class($controller) : ($controller ? trim($controller) : get_class(currentController()));
+		
+		$controller = str_before(class_basename($controller), "Controller");
+		
+		$controller .= $permission_name ? ucfirst($permission_name) : '';
+		
+		$controller = snake_case($controller);
+		
+		$controller = $permission_name ? $controller : str_finish($controller, "_");
+		
+		return str_ireplace("_", $separator, $controller);
+	}
+}
+
+
+if (!function_exists('crudTrans')) {
+	/**
+	 * Translate curd syste,
+	 *
+	 * @param  string $key
+	 * @param  array  $replace
+	 * @param  string $locale
+	 *
+	 * @return \Illuminate\Contracts\Translation\Translator|string|array|null
+	 */
+	function crudTrans($key = null) {
+		if (!$key) return "";
+		
+		return trans(
+			str_plural(
+				snake_case(
+					collect(
+						explode(
+							"\\",
+							str_before(Route::current()->getActionName(), "@")
+						)
+					)
+						->last()
+				)
+			) . ".{$key}"
+		);
+//        $locale = 'en';
+//        return trans($key, $replace, $locale);
+	}
+}
+
+if (!function_exists('transEN')) {
+	/**
+	 * Translate the given message. To en
+	 *
+	 * @param  string $key
+	 * @param  array  $replace
+	 * @param  string $locale
+	 *
+	 * @return \Illuminate\Contracts\Translation\Translator|string|array|null
+	 */
+	function transEN($key = null, $replace = []) {
+		$locale = 'en';
+		
+		return trans($key, $replace, $locale);
+	}
+}
+
+if (!function_exists('trans_choiceEN')) {
+	/**
+	 * Translates the given message based on a count. to en
+	 *
+	 * @param  string               $key
+	 * @param  int|array|\Countable $number
+	 * @param  array                $replace
+	 * @param  string               $locale
+	 *
+	 * @return string
+	 */
+	function trans_choiceEN($key, $number, array $replace = []) {
+		$locale = 'en';
+		
+		return trans_choice($key, $number, $replace, $locale);
+	}
+}
+
+if (!function_exists('transAR')) {
+	/**
+	 * Translate the given message. To ar
+	 *
+	 * @param  string $key
+	 * @param  array  $replace
+	 * @param  string $locale
+	 *
+	 * @return \Illuminate\Contracts\Translation\Translator|string|array|null
+	 */
+	function transAR($key = null, $replace = []) {
+		$locale = 'ar';
+		
+		return trans($key, $replace, $locale);
+	}
+}
+
+if (!function_exists('trans_choiceAR')) {
+	/**
+	 * Translates the given message based on a count. to ar
+	 *
+	 * @param  string               $key
+	 * @param  int|array|\Countable $number
+	 * @param  array                $replace
+	 * @param  string               $locale
+	 *
+	 * @return string
+	 */
+	function trans_choiceAR($key, $number, array $replace = []) {
+		$locale = 'ar';
+		
+		return trans_choice($key, $number, $replace, $locale);
+	}
+}
+
+if (!function_exists('trans2')) {
+	/**
+	 * Translate the given message. To the other language.
+	 * if your lang is ar it will return en
+	 * if your lang is en it will return ar
+	 *
+	 * @param  string $key
+	 * @param  array  $replace
+	 * @param  string $locale
+	 *
+	 * @return \Illuminate\Contracts\Translation\Translator|string|array|null
+	 */
+	function trans2($key = null, $replace = []) {
+		$locale = app()->getLocale() == 'ar' ? 'en' : 'ar';
+		
+		return trans($key, $replace, $locale);
+	}
+}
+
+if (!function_exists('trans_choice2')) {
+	/**
+	 * Translates the given message based on a count. To the other language.
+	 * if your lang is ar it will return en
+	 * if your lang is en it will return ar
+	 *
+	 * @param  string               $key
+	 * @param  int|array|\Countable $number
+	 * @param  array                $replace
+	 * @param  string               $locale
+	 *
+	 * @return string
+	 */
+	function trans_choice2($key, $number, array $replace = []) {
+		$locale = app()->getLocale() == 'ar' ? 'en' : 'ar';
+		
+		return trans_choice($key, $number, $replace, $locale);
+	}
+}
+
+if (!function_exists('autoModel')) {
+	/**
+	 * config storage for autoModel
+	 *
+	 * @param null $key
+	 * @param null $default
+	 *
+	 * @return \Illuminate\Foundation\Application|mixed|autoModel
+	 */
+	function autoModel($key = null, $default = null) {
+		if (is_null($key)) {
+			return app('autoModel');
+		}
+		
+		if (is_array($key)) {
+			return app('autoModel')->put($key);
+		}
+		
+		return app('autoModel')->get($key, $default);
+	}
+}
 
 
 // statics
