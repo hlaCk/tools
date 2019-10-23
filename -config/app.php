@@ -52,7 +52,7 @@ return [
         Plank\Mediable\MediableServiceProvider::class,
 
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-            'Conf' => \Garf\LaravelConf\LaravelConfServiceProvider::class,
+		'Conf' => \Garf\LaravelConf\LaravelConfServiceProvider::class,
     ],
 
     /*
