@@ -6,7 +6,7 @@
  * Time: 3:53 PM
  */
 
-namespace Modules\Tools\Traits;
+namespace App\Traits;
 
 /**
  * Trait HasMultiLangueageColumns
